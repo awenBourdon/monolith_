@@ -1,0 +1,44 @@
+<div class="min-h-screen">
+      
+    <section class="hero h-screen flex items-center justify-center relative overflow-hidden">
+      <div class="absolute inset-0  opacity-20 z-0"></div>
+      <div class="container mx-auto text-center relative z-10">
+        <h1 class="text-7xl md:text-9xl font-bold tracking-tight hero-title">
+          Monolith_
+        </h1>
+        <p class="text-2xl mt-4 hero-subtitle">
+          La Plateforme pour Découvrir et Partager tes Sons
+        </p>
+        <button class="mt-8 px-8 py-4 border-2 brutalist-button
+                       transition-all duration-300 hero-cta">
+          Voir Toutes les Tracks
+        </button>
+      </div>
+    </section>
+
+    <section class="tracks-section py-24 ">
+      <div class="container mx-auto">
+        <h2 class="text-5xl text-center font-bold mb-16 section-title">
+          Tracks du Moment
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8 tracks-grid">
+          <div *ngFor="let track of tracks" class="track-card border-2 p-6
+                        transition-all duration-300 hover:scale-105 track-item">
+            <div class="aspect-square border-2 bg-current mb-4"></div>
+            <h3 class="text-xl font-bold">{{ track.title }}</h3>
+            <p>{{ track.artist }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section py-24 ">
+      <div class="container mx-auto text-center">
+        <h2 class="text-5xl mb-12 font-bold section-about">À Propos</h2>
+        <p class="max-w-3xl mx-auto text-xl about-text">
+          Monolith_ est une plateforme révolutionnaire pour les artistes
+          pour découvrir, partager et se connecter à traver la musique underground.
+        </p>
+      </div>
+    </section>
+</div>
